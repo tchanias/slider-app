@@ -1,0 +1,71 @@
+.masonry{
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.masonry-item-1{
+    flex-basis: 33%;
+    margin-bottom: 12px;
+}
+
+.masonry-item-2{
+    flex-basis: 67%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.masonry .title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 15px;
+    background-color: #ffffffbf;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.masonry .item:hover .title{
+    opacity: 1;
+}
+.masonry-item-2 .item{
+    flex-basis: 47%;
+    margin-bottom: 15px; 
+}
+
+.masonry .item{
+    position: relative;
+    cursor: pointer;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .masonry{
+        flex-wrap: wrap;
+    }
+    .masonry-item-1{
+        flex-basis: 100%;
+    }
+    .masonry-item-2{
+        flex-basis: 100%;
+    }
+    .img-responsive{
+        max-height: 30vh;
+    }
+}
+
+
+@media (max-width:420px){
+    .masonry-item-2 .item{
+        flex-basis: 100%;
+    }
+}

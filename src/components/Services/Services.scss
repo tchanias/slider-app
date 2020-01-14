@@ -1,0 +1,71 @@
+.progress-bar{
+    margin: 10px 0;
+    background-color: #f3f3f3;
+}
+.progress-bar-container{
+    padding: 10px 0;
+}
+.progress-width{
+    position: relative;
+    height: 10px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, red , yellow); /* Standard syntax (must be last) */
+}
+/* .progress-width:after{
+    content: '';
+    position: absolute;
+    right: -5px;
+    background-color: red;
+    top: -4px;
+    color: red;
+    border: solid 1px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+} */
+.stat-info{
+    display: flex;
+    justify-content: space-between;  
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.flexcontainer{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.flexcontainer-item{
+    flex-basis: 48%;
+}
+
+.graph-text{
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.section-title{
+    margin: 5px 0;
+    margin-bottom:40px;
+    font-size:24px;
+    font-weight: 500;
+    color: #071e57;
+}
+
+@media (max-width:768px){
+    .flexcontainer{      
+        flex-wrap: wrap;
+        justify-content: space-around;  
+    }
+    .flexcontainer-item{
+        flex-basis: 90%;
+    }
+    .section-title{
+        width: 90%;
+        margin: auto;
+    }
+    .graph-text{
+        font-size: 20px;
+    }    
+}
